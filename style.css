@@ -27,21 +27,36 @@ body {
     --Botao: #241F9F;
     --Simbolo: #32228F;
 
-    .vetor.esquerdo {
+    .header .vetor.esquerdo {
 
         content: url(Vetores/Página\ Inicial/Header/vetorLClaro.png);
     }
 
-    .vetor.direito {
+    .header .vetor.direito {
         content: url(Vetores/Página\ Inicial/Header/VetorRClaro.png);
     }
 
     .hexagon.esquerdo {
-        content: url(Vetores/Página\ Inicial/Header/HexagonLClaro.png);
+        content: url(Vetores/Página\ Inicial/Main/HexagonLClaro.png);
     }
 
     .hexagon.direito {
-        content: url(Vetores/Página\ Inicial/Header/HexagonRClaro.png);
+        content: url(Vetores/Página\ Inicial/Main/HexagonRClaro.png);
+    }
+
+    .footer .vetor.esquerdo {
+
+        content: url(Vetores/Página\ Inicial/Footer/VetorLClaro.png);
+    }
+
+    .footer .vetor.direito {
+        content: url(Vetores/Página\ Inicial/Footer/VetorRClaro.png);
+    }
+}
+
+@keyframes SobreAnimation {
+    50% {
+        transform: translateY(-25%);
     }
 }
 
@@ -79,20 +94,28 @@ h1 {
     transform: scale(1.2);
 }
 
-.vetor.esquerdo {
+.header .vetor.esquerdo {
     content: url(Vetores/Página\ Inicial/Header/VetorLEscuro.png);
 }
 
-.vetor.direito {
+.header .vetor.direito {
     content: url(Vetores/Página\ Inicial/Header/VetorREscuro.png);
 }
 
 .hexagon.esquerdo {
-    content: url(Vetores/Página\ Inicial/Header/HexagonLEscuro.png);
+    content: url(Vetores/Página\ Inicial/Main/HexagonLEscuro.png);
 }
 
 .hexagon.direito {
-    content: url(Vetores/Página\ Inicial/Header/HexagonREscuro.png);
+    content: url(Vetores/Página\ Inicial/Main/HexagonREscuro.png);
+}
+
+.footer .vetor.esquerdo {
+    content: url(Vetores/Página\ Inicial/Footer/vetorLEscuro.png);
+}
+
+.footer .vetor.direito {
+    content: url(Vetores/Página\ Inicial/Footer/VetorREscuro.png);
 }
 
 .header {
@@ -152,11 +175,13 @@ h1 {
 #inicio {
     display: flex;
     flex-flow: column;
-        align-items: center;
+    align-items: center;
+
     main {
         display: flex;
         justify-content: space-between;
         width: 100%;
+
         .container {
             display: flex;
             justify-content: center;
@@ -175,6 +200,7 @@ h1 {
                 }
             }
         }
+
         margin-bottom: 10%;
     }
 
@@ -187,23 +213,77 @@ h1 {
         padding: 2.5%;
         border-radius: 30px;
         gap: 30px;
-        h1{text-align: center;font-size: 48px;}
-        .txt{font-size: 20px;}
+        animation: SobreAnimation ease-out 1s 1;
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.25);
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+        }
+
+        .txt {
+            font-size: 20px;
+        }
+    }
+
+    .sobre:hover {
+        transform: translateY(-20px);
     }
 }
-.footer{
-    .FooterDetalhes{
+
+.footer {
+    .FooterDetalhes {
         display: flex;
         justify-content: space-between;
-        .vetor.esquerdo{scale: -1;}
-        .vetor.direito{transform: rotate(180deg);}
     }
-    footer{padding: 0 5%;
-        height: 100px;
+
+    footer {
+        padding: 0 5%;
+        height: 250px;
         background-color: var(--Principal);
         display: flex;
         align-items: center;
-        justify-content: space-between;}
+        justify-content: space-evenly;
+
+        .footerInfo {
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-evenly;
+
+            h1 {
+                text-align: center;
+            }
+
+            .footerSimbolos {
+                display: grid;
+                grid-template-rows: repeat(2,1fr);
+                grid-template-columns: 2fr 1fr;
+                span {
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    text-align: center;
+                    i {
+                        font-size: 28px;
+                    }
+                }
+
+                i {
+                    color: var(--Detalhe);
+                    font-size: 30px;
+                }
+                a{text-align: center;}
+                >a:hover i {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
 
 }
-#teste{transform: scaleX(-1);}
+
+#teste {
+    transform: scaleX(-1);
+}
