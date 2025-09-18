@@ -29,7 +29,7 @@ body {
 
     .header .vetor.esquerdo {
 
-        content: url(Vetores/Página\ Inicial/Header/vetorLClaro.png);
+        content: url(Vetores/Página\ Inicial/Header/VetorLClaro.png);
     }
 
     .header .vetor.direito {
@@ -111,7 +111,7 @@ h1 {
 }
 
 .footer .vetor.esquerdo {
-    content: url(Vetores/Página\ Inicial/Footer/vetorLEscuro.png);
+    content: url(Vetores/Página\ Inicial/Footer/VetorLEscuro.png);
 }
 
 .footer .vetor.direito {
@@ -286,4 +286,5 @@ h1 {
 
 #teste {
     transform: scaleX(-1);
+
 }
