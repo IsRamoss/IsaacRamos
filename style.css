@@ -364,7 +364,8 @@ h1 {
                     align-items: center;
                     flex-direction: column;
                     border-radius: 100px;
-                    background: #240746;
+                    background: #5B4EA3;
+background: radial-gradient(circle, rgba(91, 78, 163, 1) 0%, rgba(36, 7, 70, 1) 100%);
                     color: white;
                 }
 
