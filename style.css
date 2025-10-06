@@ -4,6 +4,10 @@
     transition: 0.5s;
 }
 
+body {
+    background-color: var(--Fundo);
+}
+
 :root {
     --Fundo: #1B2430;
     --Principal: #240746;
@@ -14,9 +18,7 @@
     --Simbolo: #ffffff;
 }
 
-body {
-    background-color: var(--Fundo);
-}
+
 
 .modoclaro {
     --Fundo: #897DCF;
@@ -558,9 +560,32 @@ a {
             form {
                 background-color: var(--JanelaSecundaria);
                 width: 60%;
-                input{
+                padding: 2.5%;
+                h1{font-size: 30px;}
+                input, textarea, button{
                     background-color: var(--Principal);
                     outline: none;
+                    border: 0;
+                    width: 100%;
+                    border-radius: 30px;
+                    padding-left: 2.5%;
+                    color: var(--Simbolo);
+                    font-family: 'Open Sans';
+                    font-size: 18px;
+                }
+                input::placeholder, textarea::placeholder{color: rgb(207, 206, 206);}
+                input{
+                    height: 48px;
+                }
+                button{
+                    margin-top: 2.5%;
+                    height: 10%;
+                    background-color: var(--Botao);
+                    line-height: 1;
+                }
+                textarea{
+                    padding-top: 2.5%;
+                    resize: none;
                 }
             }
 
