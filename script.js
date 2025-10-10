@@ -1,11 +1,11 @@
-let botao = document.getElementById('modos');
 
-botao.addEventListener('click', () => {
+function modoclaro(){
   document.body.classList.toggle('modoclaro');
-});
+}
 
-let enviar =document.getElementById('enviar')
+let enviar = document.getElementById('enviar');
 
-enviar.addEventListener('click',() => {
+enviar.addEventListener('click', (event) => {
+
   enviar.style.backgroundColor = '#ffffff';
-})
+});

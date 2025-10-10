@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 body {
@@ -16,6 +16,10 @@ body {
     --JanelaSecundaria: #441F72;
     --Botao: #18062C;
     --Simbolo: #ffffff;
+    --bgLTop: url(Vetores/Página\ Inicial/Header/VetorLEscuro.png);
+    --bgRTop: url(Vetores/Página\ Inicial/Header/VetorREscuro.png);
+    --bgLBot: url(Vetores/Página\ Inicial/Footer/VetorLEscuro.png);
+    --bgRbot: url(Vetores/Página\ Inicial/Footer/VetorREscuro.png);
 }
 
 
@@ -28,16 +32,10 @@ body {
     --JanelaSecundaria: #5450C5;
     --Botao: #241F9F;
     --Simbolo: #32228F;
-
-    .header .vetor.esquerdo {
-
-        content: url(Vetores/Página\ Inicial/Header/vetorLClaro.png);
-    }
-
-    .header .vetor.direito {
-        content: url(Vetores/Página\ Inicial/Header/VetorRClaro.png);
-    }
-
+    --bgLTop: url(Vetores/Página\ Inicial/Header/VetorLClaro.png);
+    --bgRTop: url(Vetores/Página\ Inicial/Header/VetorRClaro.png);
+    --bgLBot: url(Vetores/Página\ Inicial/Footer/VetorLClaro.png);
+    --bgRbot: url(Vetores/Página\ Inicial/Footer/VetorRClaro.png);
     .hexagon.esquerdo {
         content: url(Vetores/Página\ Inicial/Main/HexagonLClaro.png);
     }
@@ -46,15 +44,9 @@ body {
         content: url(Vetores/Página\ Inicial/Main/HexagonRClaro.png);
     }
 
-    .footer .vetor.esquerdo {
-
-        content: url(Vetores/Página\ Inicial/Footer/VetorLClaro.png);
+    header .botao::after{
+        content: "Modo Escuro";
     }
-
-    .footer .vetor.direito {
-        content: url(Vetores/Página\ Inicial/Footer/VetorRClaro.png);
-    }
-
 }
 
 img {
@@ -118,11 +110,11 @@ h1 {
 }
 
 .header .vetor.esquerdo {
-    content: url(Vetores/Página\ Inicial/Header/VetorLEscuro.png);
+    content: var(--bgLTop);
 }
 
 .header .vetor.direito {
-    content: url(Vetores/Página\ Inicial/Header/VetorREscuro.png);
+    content: var(--bgRTop);
 }
 
 .hexagon.esquerdo {
@@ -134,11 +126,11 @@ h1 {
 }
 
 .footer .vetor.esquerdo {
-    content: url(Vetores/Página\ Inicial/Footer/vetorLEscuro.png);
+    content: var(--bgLBot);
 }
 
 .footer .vetor.direito {
-    content: url(Vetores/Página\ Inicial/Footer/VetorREscuro.png);
+    content: var(--bgRbot);
 }
 
 a {
@@ -176,6 +168,9 @@ a {
 
             div {
                 font-size: clamp(18px, 2.5vw, 24px);
+            }
+            div::after{
+                content: "Modo Claro";
             }
         }
 
