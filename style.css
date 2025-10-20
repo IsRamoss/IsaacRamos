@@ -36,6 +36,7 @@ body {
     --bgRTop: url(Vetores/Página\ Inicial/Header/VetorRClaro.png);
     --bgLBot: url(Vetores/Página\ Inicial/Footer/VetorLClaro.png);
     --bgRbot: url(Vetores/Página\ Inicial/Footer/VetorRClaro.png);
+
     .hexagon.esquerdo {
         content: url(Vetores/Página\ Inicial/Main/HexagonLClaro.png);
     }
@@ -44,7 +45,7 @@ body {
         content: url(Vetores/Página\ Inicial/Main/HexagonRClaro.png);
     }
 
-    header .botao::after{
+    header .botao::after {
         content: "Modo Escuro";
     }
 }
@@ -169,7 +170,8 @@ a {
             div {
                 font-size: clamp(18px, 2.5vw, 24px);
             }
-            div::after{
+
+            div::after {
                 content: "Modo Claro";
             }
         }
@@ -262,6 +264,7 @@ a {
 
         .txt {
             font-size: clamp(14px, 2vw, 20px);
+            font-weight: 300;
         }
     }
 
@@ -556,8 +559,14 @@ a {
                 background-color: var(--JanelaSecundaria);
                 width: 60%;
                 padding: 2.5%;
-                h1{font-size: 30px;}
-                input, textarea, button{
+
+                h1 {
+                    font-size: 30px;
+                }
+
+                input,
+                textarea,
+                button {
                     background-color: var(--Principal);
                     outline: none;
                     border: 0;
@@ -568,27 +577,119 @@ a {
                     font-family: 'Open Sans';
                     font-size: 18px;
                 }
-                input::placeholder, textarea::placeholder{color: rgb(207, 206, 206);}
-                input{
+
+                input::placeholder,
+                textarea::placeholder {
+                    color: rgb(207, 206, 206);
+                }
+
+                input {
                     height: 48px;
                 }
-                button{
+
+                button {
+                    cursor: pointer;
                     margin-top: 2.5%;
                     height: 10%;
                     background-color: var(--Botao);
                     line-height: 1;
                 }
-                textarea{
+
+                textarea {
                     padding-top: 2.5%;
                     resize: none;
                 }
 
+                button:hover {
+                    transform: scale(1.02);
+                }
             }
 
             #contatos {
+                height: 80%;
                 width: 35%;
                 background-color: var(--JanelaSecundaria);
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                h1 {
+                    font-size: 32px;
+                    color: var(--Simbolo);
+                }
+
+                .contatoSimbolos {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    i {
+                        color: var(--Principal);
+                        font-size: 48px;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                    }
+
+                }
+            }
+
+            #contatos,
+            form {
+                border-radius: 50px;
             }
         }
+    }
+}
+
+@media (max-width: 550px){
+    body {
+        width: 100vw;
+        ;
+    }
+
+    header {
+        ul {
+            display: none !important;
+        }
+
+        .botao {
+            display: none !important;
+        }
+    }
+
+    .HeaderDetalhes {
+        display: none !important;
+    }
+
+    #inicio>main {
+        >img {
+            display: none !important;
+        }
+        .container{
+            flex-flow: column;
+            img{width: 80%; aspect-ratio: 1 / 1;}
+            div{
+                width: 80%;
+                h1{
+                    text-align: center;
+                    font-size: clamp(28px, 10vw, 96px);
+
+                }
+                p{text-align: center;}
+                br{display: none;}
+            }
+        }
+    }
+    #inicio .sobre{
+        padding: 10%;
+        h1{font-size: clamp(24px, 6vw, 72px);}
     }
 }
