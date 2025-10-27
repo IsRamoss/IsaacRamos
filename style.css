@@ -487,6 +487,10 @@ a {
 
             .card:hover {
                 transform: scale(1.05);
+
+                .desc h1 {
+                    color: #D4AF37;
+                }
             }
 
             .card {
@@ -503,7 +507,6 @@ a {
                 .desc {
                     width: 70%;
                     display: flex;
-                    /* gap: 10px; */
                     align-items: center;
                     flex-flow: column;
                     text-align: center;
@@ -519,13 +522,39 @@ a {
                         color: #D4AF37;
                     }
 
-                    h1:hover {
-                        color: #D4AF37;
+
+                    .button {
+                        background-color: var(--Botao);
+                        padding: 2.5%;
+                        border-radius: 50px;
+                        cursor: pointer;
+                    }
+
+                    .button:hover {
+                        transform: scale(1.03);
                     }
                 }
 
                 .desc:hover {
                     transform: translateY(-10px);
+
+                }
+
+                dialog {
+                    position: fixed;
+                    top: 60%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    background-color: transparent;
+                    border: 0;
+                    outline: 0;
+                    div {
+                        height: 70vh;
+                        width: 80vw;
+                        background-color: var(--JanelaSecundaria);
+                        
+                    }
+
                 }
             }
         }
@@ -649,7 +678,7 @@ a {
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
     body {
         width: 100vw;
         ;
@@ -673,23 +702,40 @@ a {
         >img {
             display: none !important;
         }
-        .container{
+
+        .container {
             flex-flow: column;
-            img{width: 80%; aspect-ratio: 1 / 1;}
-            div{
+
+            img {
                 width: 80%;
-                h1{
+                aspect-ratio: 1 / 1;
+            }
+
+            div {
+                width: 80%;
+
+                h1 {
                     text-align: center;
                     font-size: clamp(28px, 10vw, 96px);
 
                 }
-                p{text-align: center;}
-                br{display: none;}
+
+                p {
+                    text-align: center;
+                }
+
+                br {
+                    display: none;
+                }
             }
         }
     }
-    #inicio .sobre{
+
+    #inicio .sobre {
         padding: 10%;
-        h1{font-size: clamp(24px, 6vw, 72px);}
+
+        h1 {
+            font-size: clamp(24px, 6vw, 72px);
+        }
     }
 }

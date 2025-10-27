@@ -9,3 +9,8 @@ enviar.addEventListener('click', (event) => {
 
   enviar.style.backgroundColor = '#ffffff';
 });
+
+function abrirLunarie(){
+  let modalLun = document.getElementById("modalLunarie");
+  modalLun.showModal();
+}
