@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -49,7 +49,16 @@
                         <span class="txt button" onclick="abrirLunarie()">Conheça</span>
                         <dialog id="modalLunarie">
                             <div>
-                                <h1>Lunarie</h1>
+                                <h1>LUNARIÉ</h1>
+                                <div class="ModalDesc">
+                                    <img src="Adobe Express - file.png">
+                                    <span class="txt">A Lunarié é uma marca de cosméticos desenvolvida para transmitir
+                                        sofisticação e autenticidade, com uma estética que une o luxo moderno à
+                                        feminilidade sutil. O projeto abrangeu o design visual completo do site, com
+                                        base em uma paleta de tons dourados e azul-violetam tipografia refinada e uma
+                                        navegação fluida e intuitiva</span>
+                                </div>
+                                <button id="closeModal" onclick="fecharLunarie()">Fechar</button>
                             </div>
                         </dialog>
 
@@ -62,7 +71,23 @@
                         </a>
                         <span class="txt">Réplica de site
                             com HTML, CSS</span>
-                        <span class="txt button">Conheça</span>
+                        <span class="txt button" onclick="abrirTulen()">Conheça</span>
+                        <dialog id="modalTulen">
+                            <div>
+                                <h1>TULEN</h1>
+                                <div class="ModalDesc">
+                                    <img src="Adobe Express - file (1).png">
+                                    <span class="txt">O site Tulen foi desenvolvido com o objetivo de aprimorar técnicas
+                                        de layout responsivo utilizando css grid. o projeto explora a organização visual
+                                        de seções dinâmicas e simétricas, com foco em proporção, alinhamento e
+                                        hierarquia de conteúdo. a proposta foi criar uma página limpa, moderna e
+                                        funcional, destacando a versatilidade do grid na construção de interfaces
+                                        adaptáveis e esteticamente equilibradas</span>
+                                </div>
+                                <button id="closeModal" onclick="fecharTulen()">Fechar</button>
+                            </div>
+                        </dialog>
+
                     </div>
                 </div>
                 <div class="card"><img src="Projetos/Bitmap.png" alt="">

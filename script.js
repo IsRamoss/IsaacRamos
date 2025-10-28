@@ -1,16 +1,27 @@
 
-function modoclaro(){
+function modoclaro() {
   document.body.classList.toggle('modoclaro');
 }
 
-let enviar = document.getElementById('enviar');
 
-enviar.addEventListener('click', (event) => {
-
-  enviar.style.backgroundColor = '#ffffff';
-});
-
-function abrirLunarie(){
+function abrirLunarie() {
   let modalLun = document.getElementById("modalLunarie");
   modalLun.showModal();
+
+}
+
+function fecharLunarie(){
+  let modalLun = document.getElementById("modalLunarie");
+  modalLun.close();
+}
+
+function abrirTulen() {
+  let modalTul = document.getElementById("modalTulen");
+  modalTul.showModal();
+
+}
+
+function fecharTulen(){
+  let modalTul = document.getElementById("modalTulen");
+  modalTul.close();
 }
