@@ -1,7 +1,27 @@
+let bot = document.getElementById("check")
 
-function modoclaro() {
-  document.body.classList.toggle('modoclaro');
+function TrocaModo(){
+  if(bot.checked){
+    document.body.classList.add("modoclaro")
+    localStorage.setItem("modo", "claro")
+  }
+  else { 
+    document.body.classList.remove("modoclaro")
+    localStorage.setItem("modo", "escuro")
+  }
 }
+
+
+addEventListener("DOMContentLoaded", ()=>{
+  let Modo = localStorage.getItem("modo")
+  if(Modo==="claro"){
+    bot.checked = true
+  }
+  else {
+    bot.checked = false
+  }
+  TrocaModo()
+})
 
 
 function abrirLunarie() {
@@ -20,6 +40,7 @@ function abrirTulen() {
   modalTul.showModal();
 
 }
+
 
 function fecharTulen() {
   let modalTul = document.getElementById("modalTulen");
@@ -47,5 +68,9 @@ function fecharBelara() {
   modalTul.close();
 }
 function abrirMenu(){
-  
+  document.getElementById("menu").style.left = '0px';
 }
+function FecharMenu(){
+  document.getElementById("menu").style.left = '999px';
+}
+

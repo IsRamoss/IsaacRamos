@@ -6,6 +6,7 @@
 
 body {
     background-color: var(--Fundo);
+    overflow-x: hidden;
 }
 
 :root {
@@ -103,8 +104,17 @@ h1 {
     height: auto;
     transition: 0.5s;
     cursor: pointer;
+    position: relative;
     user-select: none;
 }
+
+#check{position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+cursor: pointer;}
 
 .botao:hover {
     transform: scale(1.2);
@@ -161,7 +171,7 @@ a {
             display: none;
         }
 
-        
+
 
         >div {
             display: flex;
@@ -212,13 +222,16 @@ a {
 
 }
 
+#menu {
+    display: none;
+}
+
 #inicio {
     display: flex;
     flex-flow: column;
     align-items: center;
-    #menu {
-        display: none;
-    }
+
+
     main {
         display: flex;
         justify-content: space-between;
@@ -738,8 +751,7 @@ a {
 
 @media (max-width: 550px) {
     body {
-        width: 100vw;
-        ;
+        width: 100%;
     }
 
     header {
@@ -782,70 +794,78 @@ a {
         }
     }
 
-    #inicio{
-        #menu {
-            text-align: center;
-            display: block !important;
-            z-index: 10;
-            position: fixed;
-            top: 0;
-            height: 100vh !important;
-            width: 100%;
-            background-color: var(--Principal);
-            h1{
-                font-size: clamp(24px, 10vw, 72px) !important;
-            }
-            ul {
-                display: flex;
-                flex-flow: column;
-                list-style: none;
-                padding: 0;
-                justify-content: space-evenly;
-                margin: 0;
-                gap: 5%;
-                height: 100%;
-    
-                li {
-                    a {
-                        text-decoration: none;
-                        font-size: 48px;
-                    }
-                }
-    
-    
-                li:hover {
-                    transform: scale(1.2);
-                    text-decoration: underline !important;
-                    font-weight: 600;
-                    text-decoration-color: #ffffff !important;
-                    text-underline-offset: 5px !important;
+    #menu {
+        text-align: center;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 999px;
+        height: 100vh !important;
+        width: 100%;
+        background-color: var(--Principal);
+        display: grid !important;
+        grid-template-rows: 1fr 3fr;
+
+        h1 {
+            font-size: clamp(24px, 10vw, 72px) !important;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: column;
+            list-style: none;
+            padding: 0;
+            justify-content: space-evenly;
+            margin: 0;
+            gap: 5%;
+            height: 100%;
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 48px;
                 }
             }
-            >div { AAAAAAAAA
-                display: flex;
-                align-items: center;
-                width: 40%;
-                gap: 5%;
-    
-                h1 {
-                    font-size: clamp(20px, 3vw, 36px);
-                }
-    
-                div {
-                    font-size: clamp(18px, 2.5vw, 24px);
-                }
-    
-                div::after {
-                    content: "Modo Claro";
-                }
+
+
+            li:hover {
+                transform: scale(1.2);
+                text-decoration: underline !important;
+                font-weight: 600;
+                text-decoration-color: #ffffff !important;
+                text-underline-offset: 5px !important;
             }
         }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            padding: 2.5%;
+            justify-content: space-evenly;
+            i{font-size: 36px; color: white;align-self: flex-start;}
+        }
+
+        .topo>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            height: 30%;
+            gap: 5%;
+            font-size: clamp(18px, 2.5vw, 24px);
+        }
+        .topo>div::after {
+            content: "Modo Claro";
+        }
     }
+
     #inicio>main {
+        
         >img {
             display: none !important;
         }
-
+        
         .container {
             flex-flow: column;
 
@@ -898,5 +918,14 @@ a {
                 font-size: clamp(24px, 6vw, 72px) !important;
             }
         }
+    }
+    .hexagon{display: none !important;}
+    main{
+        justify-content: center !important;
+    }
+    #habilidades .container{
+        width: 80% !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }

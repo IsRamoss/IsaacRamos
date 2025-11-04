@@ -16,11 +16,13 @@
 </head>
 
 <body>
-    <div class="header hab">
+    <div class="header">
         <header>
             <div>
                 <h1>Isaac Ramos</h1>
-                <div class="botao" onclick="modoclaro()"></div>
+                <div class="botao">
+                    <input type="checkbox" id="check" onclick="TrocaModo()">
+                </div>
             </div>
             <ul>
                 <li><a href="index.html" class="txt">Inicio</a></li>
@@ -28,15 +30,29 @@
                 <li><a href="projetos.html" class="txt">Projetos</a></li>
                 <li><a href="contato.html" class="txt">Contato</a></li>
             </ul>
+            <button class="menu" onclick="abrirMenu()"><i class="fa-solid fa-bars"></i></button>
+
         </header>
         <div class="HeaderDetalhes">
             <img class="vetor esquerdo" alt="vetor esquerdo">
-            <h1 class="titulo">Habilidades</h1>
             <img class="vetor direito" alt="vetor direito">
         </div>
     </div>
 
     <section id="habilidades">
+        <aside id="menu">
+            <div class="topo">
+                <i class="fa-solid fa-x" onclick="FecharMenu()"></i>
+                <h1>Isaac Ramos</h1>
+                <div class="botao" onclick="modoclaro()"></div>
+            </div>
+            <ul>
+                <li><a href="index.html" class="txt ">Inicio</a></li>
+                <li><a href="habilidades.html" class="txt underline">Habilidades</a></li>
+                <li><a href="projetos.html" class="txt">Projetos</a></li>
+                <li><a href="contato.html" class="txt">Contato</a></li>
+            </ul>
+        </aside>
         <main>
             <img alt="" class="hexagon esquerdo">
             <div class="container">

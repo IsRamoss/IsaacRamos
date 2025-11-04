@@ -1,5 +1,6 @@
 <html lang="en">
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,9 @@
         <header>
             <div>
                 <h1>Isaac Ramos</h1>
-                <div class="botao" onclick="modoclaro()"></div>
+                <div class="botao">
+                    <input type="checkbox" id="check"  onclick="TrocaModo()">
+                </div>
             </div>
             <ul>
                 <li><a href="index.html" class="txt underline">Inicio</a></li>
@@ -27,8 +30,8 @@
                 <li><a href="projetos.html" class="txt">Projetos</a></li>
                 <li><a href="contato.html" class="txt">Contato</a></li>
             </ul>
-            <button class="menu" onclick="AbrirMenu()"><i class="fa-solid fa-bars"></i></button>
-            
+            <button class="menu" onclick="abrirMenu()"><i class="fa-solid fa-bars"></i></button>
+
         </header>
         <div class="HeaderDetalhes">
             <img class="vetor esquerdo" alt="vetor esquerdo">
@@ -37,8 +40,11 @@
     </div>
     <section id="inicio">
         <aside id="menu">
-            <h1>Isaac Ramos</h1>
-            <div class="botao" onclick="modoclaro()"></div>
+            <div class="topo">
+                <i class="fa-solid fa-x" onclick="FecharMenu()"></i>
+                <h1>Isaac Ramos</h1>
+                <div class="botao" onclick="modoclaro()"></div>
+            </div>
             <ul>
                 <li><a href="index.html" class="txt underline">Inicio</a></li>
                 <li><a href="habilidades.html" class="txt">Habilidades</a></li>
