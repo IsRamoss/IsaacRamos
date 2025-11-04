@@ -69,9 +69,10 @@ function fecharBelara() {
 }
 function abrirMenu(){
   document.getElementById("menu").style.left = '0px';
-  document.getElementById("modos").style.opacity = '1'
+  document.getElementById("modos").style.left = '50%';
 }
 function FecharMenu(){
   document.getElementById("menu").style.left = '999px';
+  document.getElementById("modos").style.left = '999px';
 }
 
