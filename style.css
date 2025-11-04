@@ -108,16 +108,14 @@ h1 {
     user-select: none;
 }
 
-#check{position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-opacity: 0;
-cursor: pointer;}
-
-.botao:hover {
-    transform: scale(1.2);
+#check {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .header .vetor.esquerdo {
@@ -749,98 +747,97 @@ a {
     }
 }
 
-/* @keyframes delay {
-        from{
-            opacity: 0;
-            left: 999px;
-        }
-        to 
-        {opacity: 1;
-        left: 0;}
-    }
 
-.animaDelay{
-    animation: delay 0.5s forwards;
-    animation-delay: 0.2s;
-} */
 @media (max-width: 550px) {
     body {
         width: 100%;
     }
 
-        header {
-            ul {
-                display: none !important;
-            }
-    
-            .botao {
-                z-index: 4;
-                position: fixed;
-                left: 999px;
-                transform: translateX(-50%);
-                transition: 1s;
-            }
-    
-            >button {
-                display: block !important;
-                background-color: transparent;
-                outline: none;
-                border: 0;
-                color: white;
-    
-                i {
-                    font-size: 24px;
-                }
-            }
-    
+
+    header {
+        ul {
+            display: none !important;
         }
-    
-        .HeaderDetalhes {
-            height: 20px;
-    
-            img {
-                display: none !important;
-            }
-    
-        }
-    
-        .FooterDetalhes {
-            height: 20px;
-    
-            img {
-                display: none !important;
-            }
-        }
-    
-        #menu {
-            text-align: center;
-            z-index: 3;
+
+        .botao {
+            z-index: 4;
             position: fixed;
-            top: 0;
+            top: 5.5%;
             left: 999px;
-            height: 100vh !important;
-            width: 100%;
-            background-color: var(--Principal);
-            display: grid !important;
-            grid-template-rows: 1fr 3fr;
-    
-            h1 {
-                font-size: clamp(24px, 10vw, 72px) !important;
+            transform: translateX(-50%);
+            transition: 1s;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+        }
+
+        #modos .botao:hover {
+            transform: none !important;
+        }
+
+
+
+
+        >button {
+            display: block !important;
+            background-color: transparent;
+            outline: none;
+            border: 0;
+            color: white;
+
+            i {
+                font-size: 24px;
             }
-    
-            ul {
-                display: flex;
-                flex-flow: column;
-                list-style: none;
-                padding: 0;
-                justify-content: space-evenly;
-                margin: 0;
-                gap: 5%;
-                height: 100%;
-    
-                li {
-                    a {
-                        text-decoration: none;
+        }
+
+    }
+
+    .HeaderDetalhes {
+        height: 20px;
+
+        img {
+            display: none !important;
+        }
+
+    }
+
+    .FooterDetalhes {
+        height: 20px;
+
+        img {
+            display: none !important;
+        }
+    }
+
+    #menu {
+        text-align: center;
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        left: 999px;
+        height: 100vh !important;
+        width: 100%;
+        background-color: var(--Principal);
+        display: grid !important;
+        grid-template-rows: 1fr 3fr;
+
+        h1 {
+            font-size: clamp(24px, 10vw, 72px) !important;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: column;
+            list-style: none;
+            padding: 0;
+            justify-content: space-evenly;
+            margin: 0;
+            gap: 5%;
+            height: 100%;
+
+            li {
+                a {
+                    text-decoration: none;
                     font-size: 48px;
                 }
             }
@@ -861,7 +858,12 @@ a {
             flex-flow: column;
             padding: 2.5%;
             justify-content: space-evenly;
-            i{font-size: 36px; color: white;align-self: flex-start;}
+
+            i {
+                font-size: 36px;
+                color: white;
+                align-self: flex-start;
+            }
         }
 
         .topo>div {
@@ -873,17 +875,18 @@ a {
             gap: 5%;
             font-size: clamp(18px, 2.5vw, 24px);
         }
+
         .topo>div::after {
             content: "Modo Claro";
         }
     }
-    
+
     #inicio>main {
-        
+
         >img {
             display: none !important;
         }
-        
+
         .container {
             flex-flow: column;
 
@@ -934,45 +937,65 @@ a {
             >h1 {
                 font-size: clamp(24px, 6vw, 72px) !important;
             }
-            .footerSimbolos{
+
+            .footerSimbolos {
                 justify-content: center;
                 align-items: center;
                 grid-template-columns: 1fr !important;
                 grid-template-rows: repeat(4, 1fr) !important;
                 gap: 10px;
-                .txt{
+
+                .txt {
                     justify-content: center;
                 }
             }
         }
     }
-    .hexagon{display: none !important;}
-    main{
+
+    .hexagon {
+        display: none !important;
+    }
+
+    main {
         justify-content: center !important;
     }
-    #habilidades .container{
+
+    #habilidades .container {
         width: 80% !important;
         grid-template-rows: repeat(3, 1fr) !important;
         grid-template-columns: repeat(2, 1fr) !important;
 
-        .back{
-            h1{font-size: 16px !important;}
-            .txt{font-size: 10px !important; text-align: center;}
+        .back {
+            h1 {
+                font-size: 16px !important;
+            }
+
+            .txt {
+                font-size: 10px !important;
+                text-align: center;
+            }
         }
-        .back,.front{border-radius: 100% !important;}
+
+        .back,
+        .front {
+            border-radius: 100% !important;
+        }
     }
 
-    #projetos{
-        .container{
+    #projetos {
+        .container {
             grid-template-columns: 1fr !important;
-            grid-template-rows: repeat(4,1fr) !important;
-            .card{
-                .button{display: none !important;}
+            grid-template-rows: repeat(4, 1fr) !important;
+
+            .card {
+                .button {
+                    display: none !important;
+                }
+
                 width: 100% !important;
             }
         }
     }
-    .modoclaro{
 
-    }
+    .modoclaro {}
 }
