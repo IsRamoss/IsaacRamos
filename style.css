@@ -798,7 +798,29 @@ a {
     background: rgba(0, 0, 0, 0.5);
 }
 
+@keyframes fadeMove {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+        /* começa mais embaixo */
+    }
 
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -52%);
+        /* sobe levemente */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        /* volta ao centro */
+    }
+}
+
+#modalForms[open] {
+    animation: fadeMove 1s ease-out;
+}
 
 
 @media (max-width: 550px) {
