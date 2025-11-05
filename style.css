@@ -779,22 +779,47 @@ a {
         margin-bottom: 15px;
         font-size: 20px;
     }
+
     #fecharModal {
-  background: var(--Janelas);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 18px;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
+        background: var(--Janelas);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 18px;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+    }
 
 
 }
 
 #modalForms::backdrop {
     background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeMove {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+        /* começa mais embaixo */
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -52%);
+        /* sobe levemente */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        /* volta ao centro */
+    }
+}
+
+#modalForms[open] {
+    animation: fadeMove 1s ease-out;
 }
 
 
@@ -1036,12 +1061,13 @@ a {
         .container {
             grid-template-columns: 1fr !important;
             grid-template-rows: repeat(5, 1fr) !important;
+
             .card {
                 .button {
                     display: none !important;
                 }
 
-                
+
             }
         }
     }
