@@ -748,6 +748,56 @@ a {
 }
 
 
+#modalForms {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    background: var(--Principal);
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        background: var(--Janelas);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 18px;
+        cursor: pointer;
+        font-family: "Montserrat",
+            sans-serif;
+        font-weight: 600;
+    }
+
+    p {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    #fecharModal {
+  background: var(--Janelas);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+
+}
+
+#modalForms::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
 @media (max-width: 550px) {
     body {
         width: 100%;
@@ -986,24 +1036,35 @@ a {
         .container {
             grid-template-columns: 1fr !important;
             grid-template-rows: repeat(5, 1fr) !important;
-
             .card {
                 .button {
                     display: none !important;
                 }
 
-                width: 100% !important;
+                
             }
         }
     }
-    #contato{
-        section{height: 85% !important;
+
+    #contato {
+        section {
+            height: 85% !important;
             width: 95% !important;
-        form{width: 100% !important;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-        .campo{text-align: center;}}
-        #contatos{display: none !important;}}
+
+            form {
+                width: 100% !important;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+
+                .campo {
+                    text-align: center;
+                }
+            }
+
+            #contatos {
+                display: none !important;
+            }
+        }
     }
 }

@@ -76,3 +76,16 @@ function FecharMenu(){
   document.getElementById("modos").style.left = '999px';
 }
 
+let form = document.getElementById("formulario");
+const modal = document.getElementById("modalForms");
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  modal.showModal();
+});
+function fecharModalForms(){
+  modal.close();
+  form.reset();
+}
+modal.addEventListener("close", () => {
+  form.reset();
+});

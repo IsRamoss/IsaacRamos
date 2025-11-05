@@ -47,15 +47,23 @@
             </div>
             <ul>
                 <li><a href="index.html" class="txt ">Inicio</a></li>
-                <li><a href="habilidades.html" class="txt underline">Habilidades</a></li>
+                <li><a href="habilidades.html" class="txt ">Habilidades</a></li>
                 <li><a href="projetos.html" class="txt">Projetos</a></li>
-                <li><a href="contato.html" class="txt">Contato</a></li>
+                <li><a href="contato.html" class="txt underline">Contato</a></li>
             </ul>
         </aside>
         <main>
             <img alt="" class="hexagon esquerdo">
             <section>
-                <form action="">
+                <dialog id="modalForms">
+                    <h2>Mensagem enviada!</h2>
+                    <p class="txt">Recebi seu contato e retornarei em breve.</p>
+                    <button onclick="fecharModalForms()" id="fecharModal">Fechar</button>
+                </dialog>
+
+
+
+                <form action="" id="formulario">
                     <div class="campo">
                         <h1>Nome</h1>
                         <input type="text" placeholder="Seu nome completo">
