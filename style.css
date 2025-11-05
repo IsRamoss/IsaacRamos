@@ -996,5 +996,14 @@ a {
             }
         }
     }
-
+    #contato{
+        section{height: 85% !important;
+            width: 95% !important;
+        form{width: 100% !important;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        .campo{text-align: center;}}
+        #contatos{display: none !important;}}
+    }
 }
